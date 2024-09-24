@@ -1,0 +1,42 @@
+http://127.0.0.1:8080/customers
+###
+PUT http://127.0.0.1:8080/customers/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "code": "ACC3"
+}
+###
+DELETE http://127.0.0.1:8080/customers/3 HTTP/1.1
+###
+POST http://127.0.0.1:8080/customers HTTP/1.1
+content-type: application/json
+
+{
+    "Name": "sample sms 2",
+    "Code": "003"
+}
+###
+http://127.0.0.1:8080/orders
+###
+PUT http://127.0.0.1:8080/orders/3 HTTP/1.1
+content-type: application/json
+
+{
+    "customer_id": 1,
+    "item": "It an update",
+    "amount": 150
+}
+
+###
+DELETE http://127.0.0.1:8080/orders/2 HTTP/1.1
+###
+POST http://127.0.0.1:8080/orders HTTP/1.1
+content-type: application/json
+
+{
+    "customer_id": 1,
+    "item": "It a new one",
+    "amount": 150
+}
